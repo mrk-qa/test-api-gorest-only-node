@@ -1,4 +1,4 @@
-# Desafio de realizar teste de API sem a utilização de frameworks (somente node.js) 🚀
+# Desafio de realizar teste de API sem a utilização de frameworks (somente Node.js) 🚀
 
 ## 🔖 Requisitos
 
@@ -11,7 +11,9 @@
 
 Para rodar os testes na sua máquina, clone o repositório e execute o comando `npm install` para instalar todas as dependências.
 
-Em seguida, execute `node index.js` para rodar todos os testes ou consultar o arquivo package.json na sessão de scripts para verificar as opções de realização de testes somente em 1 arquivo.
+Após instalar todas as dependências, configure o arquivo .env seguindo o exemplo do arquivo .env.example, adicionando as variáveis BASE_URL e API_GOREST (seu token), ambos podem ser resgatados na documentação do site da API.
+
+Em seguida, execute `node index.js` para rodar todos os testes ou caso queira executar testes específicos consultar o arquivo package.json na sessão de scripts para verificar as opções de realização de testes específicos.
   
 ## 📊 API utilizada para os testes [GO REST](https://gorest.co.in)  
   
