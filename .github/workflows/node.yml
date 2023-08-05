@@ -8,6 +8,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env: 
+      BASE_URL: ${{ vars.BASE_URL }}
+      API_GOREST: ${{ secrets.API_GOREST }}
 
     strategy:
       matrix:
