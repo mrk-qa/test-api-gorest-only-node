@@ -1,8 +1,6 @@
-name: Node.js CI
+name: Testes Node.js
 
-on:
-  push:
-    branches: ['main']
+on: [push]
 
 jobs:
   setup:
@@ -23,7 +21,7 @@ jobs:
 
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Instalar dependências
         run: npm install
