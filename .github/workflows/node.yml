@@ -2,11 +2,10 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
-  build:
-
+  setup-node:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -15,7 +14,9 @@ jobs:
         node-version: 16
     - run: npm install
 
+  test:
     - name: 'Run tests'
+      needs: setup
       env: 
         BASE_URL: ${{secrets.BASE_URL}}
         API_GOREST: ${{secrets.API_GOREST}}
