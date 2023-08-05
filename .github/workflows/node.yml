@@ -30,7 +30,7 @@ jobs:
 
     - name: 'Run tests'
       env: 
-        BASE_URL: ${{ .env.vars.BASE_URL }}
+        BASE_URL: ${{ env.vars.BASE_URL }}
         API_GOREST: ${{ secrets.API_GOREST }}
       run: |
         echo "$BASE_URL"
