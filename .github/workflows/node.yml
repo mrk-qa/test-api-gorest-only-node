@@ -33,5 +33,5 @@ jobs:
         BASE_URL: ${{ vars.BASE_URL }}
         API_GOREST: ${{ secrets.API_GOREST }}
       run: |
-        echo "${{ env.BASE_URL }}"
+        echo "$BASE_URL"
         node index.js
