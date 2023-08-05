@@ -5,17 +5,18 @@ on:
     branches: [ "main" ]
 
 jobs:
-  run-node:
+  build:
 
-    - name: 'Setup node'
     runs-on: ubuntu-latest
-      node-version: 16
+      node-version: [16.x]
+
     steps:
     - uses: actions/checkout@v3
+    - name: Use Node.js
     - run: npm install
 
     - name: 'Run tests'
-      env:
+      env: 
         BASE_URL: ${{secrets.BASE_URL}}
-        API_GOREST: ${{ secrets.API_GOREST }}
+        API_GOREST: ${{secrets.API_GOREST}}
       run: node index.js
