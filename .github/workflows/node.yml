@@ -1,23 +1,34 @@
 name: Node.js CI
 
-on:
-  push:
-    branches: ['main']
+on: [push]
 
 jobs:
-  setup-node:
+  setup:
     runs-on: ubuntu-latest
+
     steps:
+    - name: Checkout do código
     - uses: actions/checkout@v3
+
+    - name: Configurar ambiente Node.js
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
-    - run: npm install
+        node-version: '16'
 
   test:
-    - name: 'Run tests'
-      needs: setup
-      env: 
-        BASE_URL: ${{secrets.BASE_URL}}
-        API_GOREST: ${{secrets.API_GOREST}}
-      run: node index.js
+    runs-on: ubuntu-latest
+    needs: setup
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v2
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar testes
+        env: 
+          BASE_URL: ${{secrets.BASE_URL}}
+          API_GOREST: ${{secrets.API_GOREST}}
+
+        run: node index.js
