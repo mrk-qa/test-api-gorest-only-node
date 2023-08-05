@@ -2,10 +2,10 @@
 
 ## 🔖 Requisitos
 
-- [Node.js] - versão 16+
-- [Visual Studio Code] - versão 1.60+
-- [Library] dotenv - versão 16.3.1+
-- [Library] @faker-js/faker - versão 8.0.2+
+- [Node.js](https://nodejs.org/en/download) - versão 16+
+- [Visual Studio Code](https://code.visualstudio.com/download) - versão 1.60+
+- [Library Npm] [dotenv](https://www.npmjs.com/package/dotenv) - versão 16.3.1+
+- [Library Npm] [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) - versão 8.0.2+
 
 ## 💻  Instalação
 
