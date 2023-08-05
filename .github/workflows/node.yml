@@ -1,4 +1,4 @@
-name: Testes Node.js
+name: Node.js Tests
 
 on: [push]
 
@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Configurar ambiente Node.js
+      - name: Set up Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: '16'
@@ -20,13 +20,13 @@ jobs:
     needs: setup
 
     steps:
-      - name: Checkout do código
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Instalar dependências
+      - name: Install dependencies
         run: npm install
 
-      - name: Executar testes
+      - name: Run tests
         env: 
           BASE_URL: ${{secrets.BASE_URL}}
           API_GOREST: ${{secrets.API_GOREST}}
