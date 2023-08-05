@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "all_tests": "node index.js",
+    "get_all_users": "node test/get_all_users.js",
+    "get_user_with_params": "node test/get_user_with_params.js",
+    "post_user": "node test/post_user.js",
+    "put_user": "node test/put_user.js",
+    "del_user": "node test/del_user.js"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
