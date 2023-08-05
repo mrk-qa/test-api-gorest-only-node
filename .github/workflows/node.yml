@@ -20,13 +20,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm install
-    
-    - name: 'Create .env file'
-      run: |
-        touch .env
-        echo BASE_URL=${{ vars.BASE_URL }} >> .env
-        echo API_GOREST=${{ secrets.API_GOREST }} >> .env
-        cat .env
 
     - name: 'Run tests'
       env: 
