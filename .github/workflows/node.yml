@@ -34,5 +34,5 @@ jobs:
 
     - name: 'Run tests'
       run: |
-        echo "${{ env.vars.BASE_URL }}"
+        echo "${{ env.BASE_URL }}"
         node index.js
