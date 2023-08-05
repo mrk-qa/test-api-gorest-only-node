@@ -30,4 +30,6 @@ jobs:
         cat .env
 
     - name: 'Run tests'
-      run: node index.js
+      run: |
+        echo "${{ vars.BASE_URL }}"
+        node index.js
