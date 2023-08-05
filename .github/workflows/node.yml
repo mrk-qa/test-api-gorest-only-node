@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do código
-    - uses: actions/checkout@v3
+      - name: Checkout do código
+      - uses: actions/checkout@v3
 
-    - name: Configurar ambiente Node.js
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '16'
+      - name: Configurar ambiente Node.js
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
 
   test:
     runs-on: ubuntu-latest
